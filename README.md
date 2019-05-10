@@ -132,6 +132,14 @@ Please follow the instructions outlined
 [in the documentation](https://edgedb.com/docs/internals/dev).
 
 
+Live Demo
+=========
+
+You can try EdgeDB in Gitpod, a one-click online IDE for GitHub:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/edgedb/edgedb)
+
+
 License
 =======
 

@@ -1,0 +1,16 @@
+image:
+  file: .gitpod.dockerfile
+ports:
+  - port: 5656
+    onOpen: ignore
+tasks:
+  - init: >
+      pyenv local 3.7.2 &&
+      pip install --quiet -U setuptools wheel pip &&
+      .ci/travis-install.sh
+    command: >
+      gp preview https://edgedb.com/docs/tutorial/createdb#ref-tutorial-createdb 2>/dev/null ;
+      edb server
+    name: edb server
+  - command: gp await-port 5656 && edgedb
+    name: edgedb
